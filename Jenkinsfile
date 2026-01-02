@@ -24,14 +24,14 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 deploy adapters: [
-                    tomcat9(
-                        credentialsId: env.TOMCAT_CREDENTIALS,
-                        path: '',
-                        url: "${env.TOMCAT_URL}"
-                    )
-                ],
-                contextPath: 'mvnwebapp',
-                war: 'target/mvnwebapp.war'
+    tomcat9(
+        credentialsId: 'tomcat-creds',
+        url: 'http://localhost:9000'
+    )
+],
+contextPath: 'mvnwebapp',
+war: 'target/mvnwebapp.war'
+
             }
         }
     }
