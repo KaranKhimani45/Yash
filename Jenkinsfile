@@ -30,8 +30,8 @@ pipeline {
                         url: "${env.TOMCAT_URL}"
                     )
                 ],
-                contextPath: 'sample-app',
-                war: 'target/sample-app.war'
+                contextPath: 'mvnwebapp',
+                war: 'target/mvnwebapp.war'
             }
         }
     }
