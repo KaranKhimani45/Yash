@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven3'
-    }
-
     environment {
         TOMCAT_URL = 'http://13.60.17.20/:9000'
         TOMCAT_CREDENTIALS = 'tomcat-creds'
